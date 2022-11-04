@@ -1,0 +1,143 @@
+/* .anim:hover {
+  color: aquamarine;
+}
+.navbar {
+  background-color: rgb(199, 202, 30);
+  margin-top: 0;
+  box-shadow: outset 3px black;
+  position: relative;
+  top: 0;
+}
+.navlist {
+  list-style: none;
+  display: flex;
+}
+.navlist li {
+  padding: 10px;
+  /* border: 1px black solid; */
+/* margin: 2px;
+}
+.navlist li:hover {
+  background-color: rgb(20, 35, 26);
+}
+.navlist li:hover a {
+  color: whitesmoke;
+}
+navlist li:hover {
+  background-color: rgb(20, 35, 26);
+}
+.navhead:hover {
+  background-color: rgb(199, 202, 30);
+  color: black;
+} */
+.navbar {
+  text-decoration: none;
+  color: black;
+  font-family: Oswald;
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 10px;
+  box-shadow: 3px 1px 3px 3px rgba(210, 89, 89, 0.3);
+}
+/* .navhead {
+  float: left;
+  margin-left: 3px;
+} */
+#carouselExampleCaptions {
+  width: 80%;
+  height: auto;
+  position: relative;
+  left: 10%;
+}
+.nav-item {
+  font-size: 20px;
+}
+.thumbnails {
+  margin-top: 0;
+}
+.thumbnails a {
+  /* width: 40%; */
+  float: left;
+  width: 25%;
+  display: block;
+  margin-bottom: 15px;
+
+  padding-left: 3px;
+  padding-right: 3px;
+  box-sizing: border-box;
+  height: auto;
+}
+.thumbnails img {
+  max-width: 100%;
+  height: auto;
+  transition: all 0.2s ease-in-out;
+}
+.thumbnails a:hover {
+  transform: rotate(2deg);
+  opacity: 1;
+  scale: 1;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+}
+/* .thumbnails a:hover img {
+  opacity: 0.92;
+} */
+.thumbnails:hover img {
+  scale: 0.92;
+  opacity: 0.9;
+}
+.foodg {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  text-shadow: 3px 3px rgb(210, 89, 89);
+  font-family: Oswald;
+  font-size: 100px;
+  font-style: normal;
+  margin-top: 10px;
+  transition: all 1s ease-in-out;
+  font-variant: normal;
+  font-weight: 400;
+  opacity: 0;
+}
+.foodg:hover {
+  background-color: black;
+  opacity: 1;
+  /* transition-property: all;
+  transition-time: 0.5s; */
+  /* transition-property: background-color; */
+
+  color: whitesmoke;
+}
+.foot {
+  /* background-color: bisque; */
+  font-family: Oswald;
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+}
+.card-body {
+  text-align: center;
+}
+.foot {
+  position: relative;
+  bottom: 0;
+  background-color: rgba(160, 20, 20, 0.7);
+
+  margin-bottom: 5px;
+  border-radius: 2px;
+}
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1;
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "smartpind",
+    "menu": "menu items",
+    "rating": "3",
+    "location": "beside ccd"
+  },
+  {
+    "name": "heritage",
+    "menu": "some random things",
+    "rating": "4",
+    "location": "beside ccd"
+  }
+]

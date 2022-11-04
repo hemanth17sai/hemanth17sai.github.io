@@ -1,0 +1,123 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index2.css" type="text/css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script src=
+"https://code.jquery.com/jquery-3.5.1.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald" /><link rel='stylesheet' href='//fonts.googleapis.com/css?family=Inconsolata' type='text/css' />
+    <title>KGP's food paradise</title>
+    <link
+      rel="icon"
+      href="https://img.icons8.com/ios/344/restaurant-building.png"
+      type="image/x-icon"
+    />
+    
+  </head>
+  <body>
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABLklEQVRIie3UPy8EQRgG8B/FJRJBSYGGKHTnE1zCR1CoruIraJVaJaFRIRGFr+A6yV10ao24IBQKJznF7SaTdXO3t+4KiSeZ7Oy8z5+ZeTdLPpSwiRvcYgcTObU9MYc9PKGdGa84wGIR4wou0QoMG9hORiNYbyXcSj/TSZ2j3wXiL1xjHWMZ/hpO8Rnw77GLmZC4hH08B8THZG0hx2lnE9OHQP+OQ6xCPSjUsKXT1EFRSrS1wK8OVZygXMA0hnLiWY0R0h30mtO5iiusDLqDvAHp+wvmRxnQxsWoA966GWW/7VCY1mPzkBf1G48EfCTPpWBtOVP7Fc79/Pek4yzgZWu5MY1jNANxE0eYGiQg1oMQ2XvvVov6xXowNAwroIaNouJeDezb3D9zRf8BxfENAM54oiTsZXkAAAAASUVORK5CYII="
+            height="20"
+            alt="MDB Logo"
+            loading="lazy"
+          />
+          <small>KGP's Food Paradise</small>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            
+        </div>
+      </div>
+    </nav>
+    <!--navbar completion-->
+    <div class="page2">
+    <table id='table'>
+      
+      <tr>
+          <th>Resturant name</th>
+          <th>menu</th>
+          <th>location</th>
+          <th>rating</th>
+      </tr>
+      <div class="ca">
+      <form class="comment-area">
+        <label class="lab fontes" for="rest">please select the restaurant to comment on!</label><br>
+        <select id="rest" class="rest">
+          <option value="smartpind">smartpind</option>
+          <option value="heritage">heritage</option>
+        </select>
+        <fieldset class="fs">
+          <legend class="fontes">Comments</legend>
+          <textarea class="fontes" placeholder="please comment on the above selected restaurant"></textarea>
+        </fieldset><br>
+        <button type="button" class="btn btn-primary fontes">send</button>
+      </form></div>
+      </div>
+      <!-- <div class="card foot">
+        <div class="card-body">
+          "Good Food Good Life"
+        </div>
+      </div> -->
+    <script type="text/javascript" >
+     
+        // var a=document.getElementById("validationServer01").value
+        $(document).ready(function () {
+  // FETCHING DATA FROM JSON FILE
+  $.getJSON("restaurant.json", function (data) {
+    var hotel = "";
+
+    // ITERATING THROUGH OBJECTS
+    $.each(data, function (key, value) {
+      // if(value.name== a)
+      //CONSTRUCTION OF ROWS HAVING
+      // DATA FROM JSON OBJECT
+      hotel += "<tr>";
+      hotel += "<td>" + value.name + "</td>"
+      hotel += "<td>" + value.menu + "</td>";
+
+      hotel += "<td>" + value.location + "</td>";
+
+      hotel += "<td>" + value.rating + "</td>";
+
+      hotel += "</tr>";
+    });
+
+    //INSERTING ROWS INTO TABLE
+    $("#table").append(hotel);
+  });
+});
+
+
+
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
